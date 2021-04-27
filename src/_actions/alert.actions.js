@@ -1,11 +1,5 @@
 import { alertConstants } from '../_constants'
 
-export const alertActions = {
-    success,
-    error,
-    clear
-}
-
 const success = message => {
     return {
         type: alertConstants.SUCCESS, message
@@ -22,4 +16,9 @@ const clear = message => {
     return {
         type: alertConstants.CLEAR, message
     }
+}
+export const alertActions = {
+    success,
+    error,
+    clear
 }
