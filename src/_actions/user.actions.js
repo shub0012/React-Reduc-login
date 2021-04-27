@@ -1,15 +1,9 @@
 import { userConstants } from '../_constants'
 import { userService } from '../_services'
-import { alertActions } from './'
+import { alertActions } from './alert.actions'
 import { history } from '../_helpers'
 
-export const userActions = {
-    login,
-    logout,
-    register,
-    getAll,
-    delete: _delete
-}
+
 
 const login = (username, password, from) => {
 
@@ -147,4 +141,12 @@ const _delete = id => {
                 error => dispatch(failure(id, error.toString()))
             )
     }
+}
+
+export const userActions = {
+    login,
+    logout,
+    register,
+    getAll,
+    delete: _delete
 }
